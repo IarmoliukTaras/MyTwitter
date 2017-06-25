@@ -12,6 +12,9 @@ class HomeDatasourceController: DatasourceController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupNavigationBarItems()
+        
         let homeDatasource = HomeDatasourse()
         self.datasource = homeDatasource
     }
