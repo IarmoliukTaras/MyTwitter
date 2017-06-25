@@ -44,6 +44,7 @@ class UserCell: DatasourceCell {
         let textView = UITextView()
         textView.font = UIFont.systemFont(ofSize: 15)
         textView.backgroundColor = .clear
+        textView.isScrollEnabled = false
         return textView
     }()
     
