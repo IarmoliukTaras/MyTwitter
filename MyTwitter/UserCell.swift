@@ -51,10 +51,10 @@ class UserCell: DatasourceCell {
     let followButton: UIButton = {
         let button = UIButton()
         button.layer.cornerRadius = 5
-        button.layer.borderColor = UIColor.cyan.cgColor
+        button.layer.borderColor = #colorLiteral(red: 0.2231017351, green: 0.626226306, blue: 0.9466118217, alpha: 1).cgColor
         button.layer.borderWidth = 1
         button.setTitle("Follow", for: .normal)
-        button.setTitleColor(UIColor.cyan, for: .normal)
+        button.setTitleColor(#colorLiteral(red: 0.2231017351, green: 0.626226306, blue: 0.9466118217, alpha: 1), for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
         button.clipsToBounds = true
         return button
@@ -62,6 +62,8 @@ class UserCell: DatasourceCell {
     
     override func setupViews() {
         super.setupViews()
+        
+        backgroundColor = .white
         
         separatorLineView.isHidden = false
         separatorLineView.backgroundColor = UIColor(r: 230, g: 230, b: 230)

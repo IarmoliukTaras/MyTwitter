@@ -14,14 +14,22 @@ class UserFooter: DatasourceCell {
         let label = UILabel()
         label.text = "Show me more"
         label.font = UIFont.systemFont(ofSize: 14)
-        label.textColor = UIColor.cyan
+        label.textColor = UIColor(r: 57, g: 160, b: 241)
         return label
     }()
     
     override func setupViews() {
         super.setupViews()
+        
+        let whiteBackgroundView = UIView()
+        whiteBackgroundView.backgroundColor = .white
+        
+        addSubview(whiteBackgroundView)
         addSubview(textLabel)
-        textLabel.anchor(self.topAnchor, left: self.leftAnchor, bottom: self.bottomAnchor, right: self.rightAnchor, topConstant: 0, leftConstant: 12, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
+        whiteBackgroundView.anchor(self.topAnchor, left: self.leftAnchor, bottom: self.bottomAnchor, right: self.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 14, rightConstant: 0, widthConstant: 0, heightConstant: 0)
+        
+        addSubview(textLabel)
+        textLabel.anchor(self.topAnchor, left: self.leftAnchor, bottom: self.bottomAnchor, right: self.rightAnchor, topConstant: 0, leftConstant: 12, bottomConstant: 14, rightConstant: 0, widthConstant: 0, heightConstant: 0)
     }
 }
 
@@ -36,6 +44,7 @@ class UserHeader: DatasourceCell {
     
     override func setupViews() {
         super.setupViews()
+        backgroundColor = .white
         separatorLineView.isHidden = false
         separatorLineView.backgroundColor = UIColor(r: 230, g: 230, b: 230)
         
