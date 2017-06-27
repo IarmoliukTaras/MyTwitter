@@ -16,7 +16,13 @@ class HomeDatasourse: Datasource {
         return [tarasUser, driplla]
     }()
     
-    let tweets = ["tweet1", "tweet2"]
+    let tweets: [Tweet] = {
+        
+        let tarasUser = User(name: "Taras Iarmoliuk", username: "@iarmoliuktaras", bioText: "Dope Developer", profileImage: #imageLiteral(resourceName: "userImage"))
+        let tweet = Tweet(user: tarasUser, message: "Wello come to episode 9 of twitter series i really need a long text block to render cell dasdasdasdasdasdasdasdasdasdasdasdasdasdasdasda")
+        let tweet2 = Tweet(user: tarasUser, message: "Wello come to episode 9 of twitter series i really need a long text block to render cell dasdasdasdasdasdasdasdasdasdasdasdasdasdasdasda")
+        return [tweet, tweet2]
+    }()
     
     //let words = ["user", "user2", "user3"]
     
@@ -33,6 +39,9 @@ class HomeDatasourse: Datasource {
     }
     
     override func item(_ indexPath: IndexPath) -> Any? {
+        if indexPath.section == 1 {
+            return tweets[indexPath.row]
+        }
         return users[indexPath.row]
     }
     
