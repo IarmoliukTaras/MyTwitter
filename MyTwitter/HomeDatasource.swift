@@ -7,14 +7,27 @@
 //
 
 import LBTAComponents
+import TRON
+import SwiftyJSON
 
-class HomeDatasourse: Datasource {
-    let users: [User] = {
-        let tarasUser = User(name: "Taras Iarmoliuk", username: "@iarmoliuktaras", bioText: "Dope Developer", profileImage: #imageLiteral(resourceName: "userImage"))
+class HomeDatasource: Datasource, JSONDecodable {
+    
+    let users: [User]
+    
+    required init(json: JSON) throws {
+        var users = [User]()
+        let array = json["users"].array
         
-        let driplla = User(name: "Vlad Ishenko", username: "@driplla", bioText: "Best DJ", profileImage: #imageLiteral(resourceName: "userImage"))
-        return [tarasUser, driplla]
-    }()
+        for user in array! {
+            let name = user["name"].stringValue
+            let username = user["username"].stringValue
+            let bio = user["bio"].stringValue
+            
+            let aUser = User(name: name, username: username, bioText: bio, profileImage: UIImage())
+            users.append(aUser)
+        }
+        self.users = users
+    }
     
     let tweets: [Tweet] = {
         

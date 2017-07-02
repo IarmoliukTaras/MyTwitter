@@ -7,6 +7,8 @@
 //
 
 import LBTAComponents
+import TRON
+import SwiftyJSON
 
 class HomeDatasourceController: DatasourceController {
     
@@ -20,8 +22,31 @@ class HomeDatasourceController: DatasourceController {
         collectionView?.backgroundColor = UIColor(r: 232, g: 236, b: 241)
         setupNavigationBarItems()
         
-        let homeDatasource = HomeDatasourse()
-        self.datasource = homeDatasource
+        fetchHomeFeed()
+    }
+    
+    let tron = TRON(baseURL: "https://api.letsbuildthatapp.com")
+    
+    class JSONError: JSONDecodable {
+        required init(json: JSON) throws {
+            print("JSON ERROR")
+        }
+    }
+    
+    fileprivate func fetchHomeFeed() {
+        
+        let request: APIRequest<HomeDatasource, JSONError> = tron.request("/twitter/home")
+        
+        request.perform(withSuccess: { (homeDatasource) in
+            print("Successfuly fetched our JSON objects")
+            print(homeDatasource.users.count)
+            
+            self.datasource = homeDatasource
+        }) { (error) in
+            print("Failed to fetch Json...", error)
+        }
+        
+        print(123)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {

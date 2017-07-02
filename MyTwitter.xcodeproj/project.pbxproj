@@ -14,7 +14,7 @@
 		9DFC75A71EFCFD7B0060EA56 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFC75A61EFCFD7B0060EA56 /* HomeController.swift */; };
 		9DFC75A91EFD14130060EA56 /* HomeDatasourceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFC75A81EFD14130060EA56 /* HomeDatasourceController.swift */; };
 		9DFC75B01EFD20FB0060EA56 /* UserHeaderFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFC75AF1EFD20FB0060EA56 /* UserHeaderFooter.swift */; };
-		9DFC75B41EFD22310060EA56 /* HomeDatasourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFC75B31EFD22310060EA56 /* HomeDatasourse.swift */; };
+		9DFC75B41EFD22310060EA56 /* HomeDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFC75B31EFD22310060EA56 /* HomeDatasource.swift */; };
 		9DFC75B61EFED3560060EA56 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFC75B51EFED3560060EA56 /* User.swift */; };
 		9DFC75B81EFFE62D0060EA56 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFC75B71EFFE62D0060EA56 /* UserCell.swift */; };
 		9DFC75BA1EFFFC6B0060EA56 /* HomeDatasourceController+navbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFC75B91EFFFC6B0060EA56 /* HomeDatasourceController+navbar.swift */; };
@@ -33,7 +33,7 @@
 		9DFC75A61EFCFD7B0060EA56 /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		9DFC75A81EFD14130060EA56 /* HomeDatasourceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeDatasourceController.swift; sourceTree = "<group>"; };
 		9DFC75AF1EFD20FB0060EA56 /* UserHeaderFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserHeaderFooter.swift; sourceTree = "<group>"; };
-		9DFC75B31EFD22310060EA56 /* HomeDatasourse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeDatasourse.swift; sourceTree = "<group>"; };
+		9DFC75B31EFD22310060EA56 /* HomeDatasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeDatasource.swift; sourceTree = "<group>"; };
 		9DFC75B51EFED3560060EA56 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9DFC75B71EFFE62D0060EA56 /* UserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		9DFC75B91EFFFC6B0060EA56 /* HomeDatasourceController+navbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HomeDatasourceController+navbar.swift"; sourceTree = "<group>"; };
@@ -111,7 +111,7 @@
 		9DFC75AB1EFD20220060EA56 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				9DFC75B31EFD22310060EA56 /* HomeDatasourse.swift */,
+				9DFC75B31EFD22310060EA56 /* HomeDatasource.swift */,
 				9DFC75B51EFED3560060EA56 /* User.swift */,
 				9DFC75E31F02434E0060EA56 /* Tweet.swift */,
 			);
@@ -265,7 +265,7 @@
 				9DFC75B01EFD20FB0060EA56 /* UserHeaderFooter.swift in Sources */,
 				9DFC75B61EFED3560060EA56 /* User.swift in Sources */,
 				9DFC75951EFCFAC20060EA56 /* AppDelegate.swift in Sources */,
-				9DFC75B41EFD22310060EA56 /* HomeDatasourse.swift in Sources */,
+				9DFC75B41EFD22310060EA56 /* HomeDatasource.swift in Sources */,
 				9DFC75E21F01BBFC0060EA56 /* TweetCell.swift in Sources */,
 				9DFC75BA1EFFFC6B0060EA56 /* HomeDatasourceController+navbar.swift in Sources */,
 				9DFC75A71EFCFD7B0060EA56 /* HomeController.swift in Sources */,
