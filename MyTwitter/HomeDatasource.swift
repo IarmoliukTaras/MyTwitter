@@ -15,29 +15,14 @@ class HomeDatasource: Datasource, JSONDecodable {
     let users: [User]
     
     required init(json: JSON) throws {
-        var users = [User]()
         let array = json["users"].array
+        self.users = array!.map{User(json: $0)}
         
-        for user in array! {
-            let name = user["name"].stringValue
-            let username = user["username"].stringValue
-            let bio = user["bio"].stringValue
-            
-            let aUser = User(name: name, username: username, bioText: bio, profileImage: UIImage())
-            users.append(aUser)
-        }
-        self.users = users
+        let tweetJsonArray = json["tweets"].array
+        self.tweets = tweetJsonArray!.map{Tweet(json: $0)}
     }
     
-    let tweets: [Tweet] = {
-        
-        let tarasUser = User(name: "Taras Iarmoliuk", username: "@iarmoliuktaras", bioText: "Dope Developer", profileImage: #imageLiteral(resourceName: "userImage"))
-        let tweet = Tweet(user: tarasUser, message: "Wello come to episode 9 of twitter series i really need a long text block to render cell dasdasdasdasdasdasdasdasdasdasdasdasdasdasdasda")
-        let tweet2 = Tweet(user: tarasUser, message: "Wello come to episode 9 of twitter series i really need a long text block to render cell dasdasdasdasdasdasdasdasdasdasdasdasdasdasdasda")
-        return [tweet, tweet2]
-    }()
-    
-    //let words = ["user", "user2", "user3"]
+    let tweets: [Tweet]
     
     override func footerClasses() -> [DatasourceCell.Type]? {
         return [UserFooter.self]
