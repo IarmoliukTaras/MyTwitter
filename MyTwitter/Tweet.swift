@@ -6,10 +6,10 @@
 //  Copyright © 2017 taras team. All rights reserved.
 //
 
-import Foundation
 import SwiftyJSON
+import TRON
 
-struct Tweet {
+struct Tweet: JSONDecodable {
     let user: User
     let message: String
     

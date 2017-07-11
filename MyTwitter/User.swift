@@ -7,8 +7,9 @@
 //
 
 import SwiftyJSON
+import TRON
 
-struct User {
+struct User: JSONDecodable {
     
     let name: String
     let username: String
